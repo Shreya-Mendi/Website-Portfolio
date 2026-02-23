@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Mendi — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">SM</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-text">Durham, NC · Duke University MEng AI</p>
+      <h1 class="hero-name reveal-text">
+        <span class="name-line">Shreya</span>
+        <span class="name-line italic">Mendi</span>
+      </h1>
+      <p class="hero-sub reveal-text">AI Engineer &amp; Researcher · Building intelligent systems at the intersection of ML, NLP, and production infrastructure.</p>
+      <div class="hero-cta reveal-text">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="mailto:shreya.mendi@duke.edu" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <!-- Floating tags -->
+    <div class="float-tag tag-1">PyTorch</div>
+    <div class="float-tag tag-2">LLMs</div>
+    <div class="float-tag tag-3">Kubernetes</div>
+    <div class="float-tag tag-4">Computer Vision</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label">About Me</p>
+          <h2 class="section-heading">Turning research into <em>real systems</em></h2>
+        </div>
+        <div class="about-right">
+          <p class="about-text">I'm a graduate student at Duke University pursuing a Master's in AI Engineering. I design and build machine learning systems end-to-end — from fine-tuning transformer models to deploying production-grade APIs on cloud infrastructure.</p>
+          <p class="about-text">Previously a DevOps Engineer at Assetmantle, where I cut infrastructure costs by 38% and maintained 99%+ uptime across distributed blockchain nodes. I care deeply about interpretable, responsible AI.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">38%</span>
+              <span class="stat-label">Infrastructure cost reduction</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">25%</span>
+              <span class="stat-label">Fewer unnecessary AI interventions</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20%</span>
+              <span class="stat-label">Recall improvement in SAR detection</span>
+            </div>
+          </div>
+          <div class="about-links">
+            <a href="https://linkedin.com/in/shreya-mendi" target="_blank" class="about-link">LinkedIn ↗</a>
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="about-link">GitHub ↗</a>
+            <a href="mailto:shreya.mendi@duke.edu" class="about-link">Email ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-heading">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card card-featured">
+          <div class="card-tag">NLP · Reinforcement Learning · PyTorch</div>
+          <h3 class="card-title">When2Speak</h3>
+          <p class="card-sub">LLM Intervention Policy Agent</p>
+          <p class="card-desc">Trained a lightweight RL policy network for multi-agent dialogue intervention using PyTorch and NLP. Reduced unnecessary interventions by 25% while maintaining task success rate, validated on a 10,000-dialogue simulation suite via A/B testing.</p>
+          <div class="card-meta">
+            <span class="card-date">Jan 2026 – Present</span>
+            <span class="card-badge">Active</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">Computer Vision · Object Detection · PyTorch</div>
+          <h3 class="card-title">UAV-SAR</h3>
+          <p class="card-sub">Aerial Human Detection (Search &amp; Rescue)</p>
+          <p class="card-desc">Fine-tuned Faster R-CNN on thermal SAR imagery. Achieved 20% recall improvement under adverse conditions (snow, smoke, sensor noise) with &lt;5% clean-data accuracy loss.</p>
+          <div class="card-meta">
+            <span class="card-date">Jan 2026 – Present</span>
+            <span class="card-badge">Active</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">Interpretable ML · Production AI</div>
+          <h3 class="card-title">BMW Capstone</h3>
+          <p class="card-sub">Industrial AI Decision System</p>
+          <p class="card-desc">Scoping and prototyping an interpretable ML solution for industrial decision-making at BMW, balancing model performance with deployment constraints and stakeholder explainability requirements.</p>
+          <div class="card-meta">
+            <span class="card-date">Jan 2026 – Present</span>
+            <span class="card-badge">Active</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">Time-Series · SARIMAX · Feature Engineering</div>
+          <h3 class="card-title">Inflationship</h3>
+          <p class="card-sub">Macroeconomic Forecasting</p>
+          <p class="card-desc">Engineered a forecasting pipeline fusing port-traffic alternative data with CPI using SARIMAX and ML. Achieved 0.67–1.69% MAPE across major CPI categories, outperforming CPI-only baselines.</p>
+          <div class="card-meta">
+            <span class="card-date">Sept 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">MLOps · FastAPI · NLP · Cloud Run</div>
+          <h3 class="card-title">AI Audit</h3>
+          <p class="card-sub">EU AI Act Compliance System</p>
+          <p class="card-desc">Built an explainable compliance classifier mapping system behavior to EU AI Act articles. Deployed FastAPI + Streamlit UI on GCP Cloud Run with MLflow experiment tracking.</p>
+          <div class="card-meta">
+            <span class="card-date">Nov 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">Chrome Extension · Privacy Engineering</div>
+          <h3 class="card-title">Alba</h3>
+          <p class="card-sub">AI Carbon Footprint Tracker</p>
+          <p class="card-desc">Shipped a privacy-first Chrome extension computing LLM energy, carbon, and water footprints client-side using emissions heuristics. Includes prompt optimization suggestions and a daily sustainability dashboard.</p>
+          <div class="card-meta">
+            <span class="card-date">Nov 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <p class="section-label">Work &amp; Education</p>
+      <h2 class="section-heading">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jul 2025 – May 2027</span>
+            <h3 class="timeline-title">MEng, Artificial Intelligence</h3>
+            <p class="timeline-org">Duke University</p>
+            <p class="timeline-desc">Coursework: Deep Learning, LLMs &amp; Intelligent Agents, Reinforcement Learning, Computer Vision, Explainable AI, Alternative Data, AI Security.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 – Present</span>
+            <h3 class="timeline-title">Teaching Assistant — Managing AI in Business</h3>
+            <p class="timeline-org">Duke University</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025</span>
+            <h3 class="timeline-title">AI Representative, Student Advisory Board</h3>
+            <p class="timeline-org">Duke University</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Sept 2023 – May 2025</span>
+            <h3 class="timeline-title">DevOps Engineer</h3>
+            <p class="timeline-org">Assetmantle Pvt. Ltd. — Blockchain Infrastructure</p>
+            <p class="timeline-desc">Reduced AWS/Hetzner infrastructure costs by 38% through architecture optimization and automated CI/CD (Docker, Kubernetes) with rollout/rollback policies, maintaining 99%+ uptime across distributed nodes.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2023 – Jul 2023</span>
+            <h3 class="timeline-title">Software Development Intern</h3>
+            <p class="timeline-org">Hewlett Packard Enterprise GlobalSoft</p>
+            <p class="timeline-desc">Deployed Dockerized microservices with observability pipelines (Grafana, Prometheus), cutting MTTD and release friction across multiple service teams.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jul 2019 – Jul 2023</span>
+            <h3 class="timeline-title">BTech, Electronics &amp; Communication Engineering</h3>
+            <p class="timeline-org">Manipal Institute of Technology — GPA: 8.71/10</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <p class="section-label">Capabilities</p>
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h4 class="skill-group-title">ML / AI</h4>
+          <div class="skill-tags">
+            <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span>
+            <span>Computer Vision</span><span>LLMs</span><span>Reinforcement Learning</span>
+            <span>Transformer Models</span><span>Finetuning</span><span>Prompt Engineering</span>
+            <span>Time-Series Forecasting</span><span>Explainable AI (XAI)</span>
+            <span>Model Evaluation</span><span>A/B Testing</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title">Frameworks &amp; Tools</h4>
+          <div class="skill-tags">
+            <span>Python</span><span>PyTorch</span><span>TensorFlow</span>
+            <span>Scikit-learn</span><span>HuggingFace</span><span>FastAPI</span>
+            <span>Flask</span><span>MLflow</span><span>Streamlit</span><span>SQL</span><span>Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4 class="skill-group-title">Cloud &amp; DevOps</h4>
+          <div class="skill-tags">
+            <span>AWS</span><span>GCP (Cloud Run)</span><span>Docker</span>
+            <span>Kubernetes</span><span>CI/CD</span><span>Git</span>
+            <span>Linux</span><span>Prometheus</span><span>Grafana</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label">Let's Connect</p>
+        <h2 class="contact-heading">Ready to build something <em>meaningful?</em></h2>
+        <p class="contact-sub">I'm open to research collaborations, full-time roles, and interesting projects in AI/ML.</p>
+        <div class="contact-actions">
+          <a href="mailto:shreya.mendi@duke.edu" class="btn-primary btn-large">shreya.mendi@duke.edu</a>
+        </div>
+        <div class="contact-socials">
+          <a href="https://linkedin.com/in/shreya-mendi" target="_blank">LinkedIn ↗</a>
+          <a href="https://github.com/Shreya-Mendi" target="_blank">GitHub ↗</a>
+          <span class="contact-phone">(919) 608-0547</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">SM</span>
+        <span class="footer-copy">© 2026 Shreya Mendi</span>
+        <span class="footer-loc">Durham, NC</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
