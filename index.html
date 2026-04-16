@@ -57,7 +57,6 @@
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
-    <!-- Floating tags -->
     <div class="float-tag tag-1">PyTorch</div>
     <div class="float-tag tag-2">LLMs</div>
     <div class="float-tag tag-3">Kubernetes</div>
@@ -74,7 +73,7 @@
         </div>
         <div class="about-right">
           <p class="about-text">I'm a graduate student at Duke University pursuing a Master's in AI Engineering. I design and build machine learning systems end-to-end — from fine-tuning transformer models to deploying production-grade APIs on cloud infrastructure.</p>
-          <p class="about-text">Previously a DevOps Engineer at Assetmantle, where I cut infrastructure costs by 38% and maintained 99%+ uptime across distributed blockchain nodes. I care deeply about interpretable, responsible AI.</p>
+          <p class="about-text">Previously a DevOps Engineer at Assetmantle, where I cut infrastructure costs by 38% and maintained 99%+ uptime across distributed blockchain nodes. I care deeply about interpretable, responsible AI — and I founded a registered NPO (Safe-T) to audit transportation algorithms for racial and economic bias.</p>
           <div class="about-stats">
             <div class="stat">
               <span class="stat-num">38%</span>
@@ -104,71 +103,301 @@
     <div class="container">
       <p class="section-label">Selected Work</p>
       <h2 class="section-heading">Projects</h2>
-      <div class="projects-grid">
 
-        <div class="project-card card-featured">
+      <!-- Filter buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="nlp">NLP / LLM</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="mlops">MLOps / Cloud</button>
+        <button class="filter-btn" data-filter="fairness">AI for Good</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- ── FEATURED ──────────────────────────────────────────────── -->
+        <div class="project-card card-featured" data-tags="active nlp">
           <div class="card-tag">NLP · Reinforcement Learning · PyTorch</div>
           <h3 class="card-title">When2Speak</h3>
           <p class="card-sub">LLM Intervention Policy Agent</p>
-          <p class="card-desc">Trained a lightweight RL policy network for multi-agent dialogue intervention using PyTorch and NLP. Reduced unnecessary interventions by 25% while maintaining task success rate, validated on a 10,000-dialogue simulation suite via A/B testing.</p>
+          <p class="card-desc">Trained a lightweight RL policy network for multi-agent dialogue intervention using PyTorch and NLP. Reduced unnecessary interventions by 25% while maintaining task success rate, validated on a 10,000-dialogue simulation suite via A/B testing. Co-authoring a NeurIPS submission on safe agentic AI behavior under faculty supervision at Duke Trust Lab.</p>
           <div class="card-meta">
             <span class="card-date">Jan 2026 – Present</span>
             <span class="card-badge">Active</span>
           </div>
+          <div class="card-links">
+            <a href="https://github.com/duke-trust-lab/when2speak" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card card-featured" data-tags="active fairness">
+          <div class="card-tag">Algorithmic Fairness · GIS · Leaflet · Python · NPO</div>
+          <h3 class="card-title">Safe-T <span class="card-npo-badge">Registered NPO</span></h3>
+          <p class="card-sub">AI Equity Audit for Transportation Safety</p>
+          <p class="card-desc">Founded a registered NPO to audit transportation AI allocation algorithms for racial and economic bias across Durham, NC. Identified that Black residents (32% of population) account for 47% of pedestrian/cyclist crash victims — caused by systematic 20-30% demand undercounting in low-income census tracts. Built an interactive Leaflet platform visualizing AI-predicted vs. need-based infrastructure gaps across income quintiles, with a replicable open-data methodology applicable to any US city.</p>
+          <div class="card-meta">
+            <span class="card-date">2025 – 2026</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- ── ACTIVE ─────────────────────────────────────────────────── -->
+        <div class="project-card" data-tags="active cv">
           <div class="card-tag">Computer Vision · Object Detection · PyTorch</div>
           <h3 class="card-title">UAV-SAR</h3>
           <p class="card-sub">Aerial Human Detection (Search &amp; Rescue)</p>
-          <p class="card-desc">Fine-tuned Faster R-CNN on thermal SAR imagery. Achieved 20% recall improvement under adverse conditions (snow, smoke, sensor noise) with &lt;5% clean-data accuracy loss.</p>
+          <p class="card-desc">Fine-tuned Faster R-CNN on thermal SAR imagery with domain-specific augmentations (snow, smoke, sensor noise). Achieved 20% recall improvement under adverse conditions with &lt;5% clean-data accuracy loss. Built end-to-end CV pipeline with custom data loaders and metrics optimized for safety-critical deployment.</p>
           <div class="card-meta">
             <span class="card-date">Jan 2026 – Present</span>
             <span class="card-badge">Active</span>
           </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
         </div>
 
-        <div class="project-card">
-          <div class="card-tag">Interpretable ML · Production AI</div>
+        <div class="project-card" data-tags="active mlops">
+          <div class="card-tag">LightGBM · SHAP · Optuna · Flask · Interpretable ML</div>
           <h3 class="card-title">BMW Capstone</h3>
-          <p class="card-sub">Industrial AI Decision System</p>
-          <p class="card-desc">Scoping and prototyping an interpretable ML solution for industrial decision-making at BMW, balancing model performance with deployment constraints and stakeholder explainability requirements.</p>
+          <p class="card-sub">Industrial AI Inventory Decision System</p>
+          <p class="card-desc">Trained and benchmarked 4 regression models (LightGBM, Ridge, MLP, Optuna-tuned TabularMLP) on 4,169 real BMW dealer orders to predict vehicle days-on-lot across 16 models. Deployed SHAP-driven recommendations via Flask REST API with 0–100 confidence scoring and a live interactive dealer dashboard.</p>
           <div class="card-meta">
             <span class="card-date">Jan 2026 – Present</span>
             <span class="card-badge">Active</span>
           </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-tags="active nlp fairness">
+          <div class="card-tag">Python · AI Safety · Benchmark Design · NLP</div>
+          <h3 class="card-title">MindGuard</h3>
+          <p class="card-sub">AI Safety Benchmark — Mental Health Crisis Response</p>
+          <p class="card-desc">Developed a benchmark of 1,200 expert-annotated synthetic prompts across 5 clinically-validated severity tiers to evaluate AI model safety calibration in mental health crisis scenarios. Achieved Fleiss' Kappa &gt;0.8 inter-rater reliability. Designed a composite safety score weighting Calibration Accuracy (40%), Critical Miss Rate (40%), Consistency (10%), and Over-Escalation Rate (10%); benchmarked GPT-4 (0.847) against a human counselor baseline (0.961).</p>
+          <div class="card-meta">
+            <span class="card-date">2026</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="active cv nlp">
+          <div class="card-tag">QLoRA · LLaMA 3.1 · Stable Diffusion XL · FastAPI · Next.js</div>
+          <h3 class="card-title">Style2Fit</h3>
+          <p class="card-sub">Situation-Aware Fashion Recommendation Pipeline</p>
+          <p class="card-desc">Fine-tuned LLaMA 3.1 8B via QLoRA (r=16, 3 epochs, 540 training pairs) and Stable Diffusion XL via LoRA (2,000 steps) to convert natural language situation prompts into structured 7-field outfit plans with full-body visual previews. Achieved 100% format compliance vs. unstructured prose from the base model. Built end-to-end FastAPI + Gradio + Next.js pipeline evaluated on ROUGE-L, format compliance, and aesthetic diversity metrics.</p>
+          <div class="card-meta">
+            <span class="card-date">Mar 2026</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="active cv">
+          <div class="card-tag">Raspberry Pi · IMU · Scikit-learn · Embedded Systems</div>
+          <h3 class="card-title">PoolCue-Assist</h3>
+          <p class="card-sub">Real-Time Billiards Stroke Analyzer</p>
+          <p class="card-desc">Designed a wearable IMU system on a Raspberry Pi 4 using an MPU6050 sensor to classify billiards strokes as GOOD/BAD via a Decision Tree classifier. Achieved high F1 across 5-fold cross-validation with ~100 Hz inference and &lt;1s feedback latency. Identified 129–246× rotational variance separation between good and bad strokes; delivered real-time feedback via LCD, RGB LEDs, and audio.</p>
+          <div class="card-meta">
+            <span class="card-date">2026</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/PoolCue-Assist" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="fairness">
+          <div class="card-tag">Data Analysis · Visualization · Python</div>
+          <h3 class="card-title">Sourcing Happiness</h3>
+          <p class="card-sub">World Happiness Report Analysis</p>
+          <p class="card-desc">Analyzed World Happiness Report data (2019–2024) across 150+ countries to identify regional and temporal trends. Built animated comparative visualizations to communicate macroeconomic and social wellbeing patterns. Applied statistical correlation techniques to surface relationships between GDP, social support, and happiness scores across income groups.</p>
+          <div class="card-meta">
+            <span class="card-date">2026</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- ── COMPLETED 2025 ─────────────────────────────────────────── -->
+        <div class="project-card" data-tags="nlp">
+          <div class="card-tag">Python · RAG · FastAPI · Railway · NLP · CBT/IFS</div>
+          <h3 class="card-title">Mirror</h3>
+          <p class="card-sub">Reflective AI Mental Wellness Companion</p>
+          <p class="card-desc">Built a reflective AI journaling companion using RAG over 8 psychological frameworks (CBT, IFS, NVC, Attachment Theory) to pattern-match emotional entries. Implemented cognitive distortion profiling across 4 distortion types and weekly self-awareness reports. Deployed Python/FastAPI on Railway with session persistence, mood trend tracking, and a trigger map logging recurring emotional patterns.</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/Mirror" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="nlp">
+          <div class="card-tag">Agentic AI · Reinforcement Learning · TypeScript · GitHub Models</div>
+          <h3 class="card-title">Tradecraft</h3>
+          <p class="card-sub">Multi-Agent AI Paper Trading Platform</p>
+          <p class="card-desc">Orchestrated five specialized AI agents (Macro Researcher, Alpha Signal Designer, Risk Manager, Execution Agent, Compliance Supervisor) using GPT-4o, Claude, and Llama via GitHub Models. Implemented Q-table reinforcement learning for adaptive execution strategy selection and an immutable audit trail for full compliance logging across all trading decisions.</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/Tradecraft" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="mlops">
+          <div class="card-tag">MLOps · FastAPI · NLP · Cloud Run · MLflow</div>
+          <h3 class="card-title">AI Audit</h3>
+          <p class="card-sub">EU AI Act Compliance System</p>
+          <p class="card-desc">Built an explainable compliance classifier (TF-IDF + logistic regression + rule-based checks) mapping system behavior to EU AI Act articles. Deployed FastAPI + Streamlit UI on GCP Cloud Run with MLflow experiment tracking. Automated regulatory article violation detection for high-risk AI system documentation.</p>
+          <div class="card-meta">
+            <span class="card-date">Nov 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/lindsaygross/AIAudit" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="mlops">
+          <div class="card-tag">Chrome Extension · Privacy Engineering · JS</div>
+          <h3 class="card-title">Alba</h3>
+          <p class="card-sub">AI Carbon Footprint Tracker</p>
+          <p class="card-desc">Shipped a privacy-first Chrome extension computing LLM energy, carbon, and water footprints client-side using emissions heuristics. Includes real-time footprint labels, prompt optimization suggestions, and a daily sustainability dashboard — eliminating server-side data collection entirely.</p>
+          <div class="card-meta">
+            <span class="card-date">Nov 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/lindsaygross/Alba" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="cv nlp">
+          <div class="card-tag">Multimodal Agent · Vision + NLP · Grad-CAM · XAI</div>
+          <h3 class="card-title">Wordle XAI Bot</h3>
+          <p class="card-sub">Multimodal Explainable AI Agent</p>
+          <p class="card-desc">Built a multimodal agent that plays Wordle using vision + NLP models, surfacing token-level saliency maps to explain each guess decision in real time. Integrated Grad-CAM explainability to trace model errors and visualize attention patterns, enabling transparent human–AI interaction and interpretable failure analysis.</p>
+          <div class="card-meta">
+            <span class="card-date">Nov 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/Wordle-XAI" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="fairness">
+          <div class="card-tag">Random Forest · PDP/ICE/ALE · Explainability</div>
+          <h3 class="card-title">Supreme Court Prediction</h3>
+          <p class="card-sub">Explainable ML on SCDB 2025</p>
+          <p class="card-desc">Modeled ~13K Supreme Court cases with Random Forest; applied PDP/ICE/ALE analysis to identify and explain top predictive drivers of judicial outcomes. Improved F1-score by ~15% through feature engineering and hyperparameter tuning, achieving ~70% accuracy on held-out case outcome prediction.</p>
+          <div class="card-meta">
+            <span class="card-date">Oct 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="nlp">
+          <div class="card-tag">React · FastAPI · Whisper · VOSK · Web Audio API</div>
+          <h3 class="card-title">QuietSky</h3>
+          <p class="card-sub">Speech Practice Game with ASR</p>
+          <p class="card-desc">Built a speech-practice game with four gameplay modes using Whisper and VOSK ASR for real-time transcription. Evaluated speech continuity, rhythm, and effort without penalizing disfluencies — improving accessibility for people who stutter. Full-stack React + Vite + FastAPI with sub-second ASR response latency.</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/QuietSky" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="nlp">
+          <div class="card-tag">Python · OpenAI API · Statistical Analysis · Prompt Engineering</div>
+          <h3 class="card-title">Contextual Boost LLMs</h3>
+          <p class="card-sub">Statistical Study on Role-Conditioned LLM Reasoning</p>
+          <p class="card-desc">Investigated role-conditioned prompting on graduate-level STEM questions using the OpenAI API. Identified domain-specific accuracy shifts (Physics +3pp) and validated statistical significance using McNemar's exact test, Wilcoxon signed-rank, and paired t-tests (p=0.65 overall).</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="mlops fairness">
+          <div class="card-tag">XGBoost · LightGBM · Neural Networks · Credit Risk</div>
+          <h3 class="card-title">Credit Risk Analysis</h3>
+          <p class="card-sub">Loan Repayment Prediction · ATM.com</p>
+          <p class="card-desc">Trained and benchmarked XGBoost, feedforward Neural Network, and LightGBM classifiers to predict 30-day loan repayment probability for ATM.com users. Achieved AUC-ROC of 0.87 with precision-recall optimized threshold selection under significant class imbalance. Engineered borrower financial features across 3 architectures for a production-ready credit scoring pipeline.</p>
+          <div class="card-meta">
+            <span class="card-date">Sep – Dec 2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi" target="_blank" class="card-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="nlp">
+          <div class="card-tag">Sentence Transformers · ChromaDB · RAG · Gradio</div>
+          <h3 class="card-title">Semantic Jury</h3>
+          <p class="card-sub">Legal Semantic Search Engine</p>
+          <p class="card-desc">Developed a semantic search engine for legal documents using sentence-transformers (all-MiniLM-L6-v2) and ChromaDB vector database, enabling natural language queries over case law with citation network discovery. Deployed a Gradio UI supporting retrieval-augmented search across landmark Supreme Court cases.</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/SemanticJury" target="_blank" class="card-link">GitHub ↗</a>
+            <a href="https://huggingface.co/spaces/ShreyaMendi/SemanticJury" target="_blank" class="card-link">Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="cv nlp">
+          <div class="card-tag">FashionCLIP · FAISS · NeuMF · SASRec · Next.js · FastAPI</div>
+          <h3 class="card-title">CineStyle</h3>
+          <p class="card-sub">Multimodal Fashion Discovery from Film &amp; TV</p>
+          <p class="card-desc">Built a film-to-fashion identification platform using FashionCLIP (512-dim embeddings) and FAISS GPU vector search over 20,000 Fashionpedia garment crops across 46 categories. Implemented a four-stage recommendation pipeline (FAISS retrieval → NeuMF re-ranking → SASRec re-ranking → diversity filtering) with measurable NDCG@10 gains over a popularity baseline. Deployed FastAPI on Railway, Next.js on Vercel, with price-aware recommendations powered by a fashion intelligence agent; evaluated on Precision@K, Recall@K, and MAP@K with 500 synthetic users × 30 interactions.</p>
+          <div class="card-meta">
+            <span class="card-date">2025</span>
+            <span class="card-badge card-badge--done">Completed</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/CineStyle" target="_blank" class="card-link">GitHub ↗</a>
+            <a href="https://cine-style-omega.vercel.app/" target="_blank" class="card-link">Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="mlops">
           <div class="card-tag">Time-Series · SARIMAX · Feature Engineering</div>
           <h3 class="card-title">Inflationship</h3>
           <p class="card-sub">Macroeconomic Forecasting</p>
-          <p class="card-desc">Engineered a forecasting pipeline fusing port-traffic alternative data with CPI using SARIMAX and ML. Achieved 0.67–1.69% MAPE across major CPI categories, outperforming CPI-only baselines.</p>
+          <p class="card-desc">Engineered a forecasting pipeline fusing port-traffic alternative data with CPI using SARIMAX and ML. Achieved 0.67–1.69% MAPE across major CPI categories, outperforming CPI-only baselines. Designed feature engineering and cross-validation strategy to prevent data leakage across 5 time-series folds.</p>
           <div class="card-meta">
             <span class="card-date">Sept 2025</span>
             <span class="card-badge card-badge--done">Completed</span>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-tag">MLOps · FastAPI · NLP · Cloud Run</div>
-          <h3 class="card-title">AI Audit</h3>
-          <p class="card-sub">EU AI Act Compliance System</p>
-          <p class="card-desc">Built an explainable compliance classifier mapping system behavior to EU AI Act articles. Deployed FastAPI + Streamlit UI on GCP Cloud Run with MLflow experiment tracking.</p>
-          <div class="card-meta">
-            <span class="card-date">Nov 2025</span>
-            <span class="card-badge card-badge--done">Completed</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="card-tag">Chrome Extension · Privacy Engineering</div>
-          <h3 class="card-title">Alba</h3>
-          <p class="card-sub">AI Carbon Footprint Tracker</p>
-          <p class="card-desc">Shipped a privacy-first Chrome extension computing LLM energy, carbon, and water footprints client-side using emissions heuristics. Includes prompt optimization suggestions and a daily sustainability dashboard.</p>
-          <div class="card-meta">
-            <span class="card-date">Nov 2025</span>
-            <span class="card-badge card-badge--done">Completed</span>
+          <div class="card-links">
+            <a href="https://github.com/Shreya-Mendi/Inflationship" target="_blank" class="card-link">GitHub ↗</a>
           </div>
         </div>
 
@@ -189,23 +418,44 @@
             <span class="timeline-date">Jul 2025 – May 2027</span>
             <h3 class="timeline-title">MEng, Artificial Intelligence</h3>
             <p class="timeline-org">Duke University</p>
-            <p class="timeline-desc">Coursework: Deep Learning, LLMs &amp; Intelligent Agents, Reinforcement Learning, Computer Vision, Explainable AI, Alternative Data, AI Security.</p>
+            <p class="timeline-desc">Coursework: Deep Learning, LLMs &amp; Intelligent Agents, Reinforcement Learning, Computer Vision, Explainable AI, Alternative Data, AI Security, AI in the Physical World, Statistical Modeling.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">2026 – Present</span>
+            <span class="timeline-date">Jan 2026 – Present</span>
+            <h3 class="timeline-title">Research Assistant</h3>
+            <p class="timeline-org">Duke Trust Lab</p>
+            <p class="timeline-desc">Co-authoring a NeurIPS submission on safe agentic AI behavior and intervention policy under faculty supervision. Leading experimental design, evaluation framework construction, and manuscript preparation. Developed benchmarking pipelines across 3+ research projects measuring model calibration, AI transparency, and decision reliability.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2026 – Present</span>
+            <h3 class="timeline-title">Student Consultant — BMW Group</h3>
+            <p class="timeline-org">Duke University Capstone</p>
+            <p class="timeline-desc">Trained and benchmarked 4 ML regression models (LightGBM, Ridge, MLP, Optuna-tuned TabularMLP) on 4,169 real BMW dealer orders to predict vehicle days-on-lot. Delivered SHAP-driven recommendations via live Flask REST API and interactive dealer dashboard.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jan 2026 – Present</span>
             <h3 class="timeline-title">Teaching Assistant — Managing AI in Business</h3>
             <p class="timeline-org">Duke University</p>
+            <p class="timeline-desc">Facilitate discussion sections and office hours for a graduate-level course covering AI strategy, LLM deployment, and responsible AI adoption. Support 40+ MEng students on project design; evaluate AI system proposals and provide structured feedback on model selection and deployment tradeoffs.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">2025</span>
+            <span class="timeline-date">Sep 2025 – Present</span>
             <h3 class="timeline-title">AI Representative, Student Advisory Board</h3>
             <p class="timeline-org">Duke University</p>
           </div>
@@ -217,7 +467,7 @@
             <span class="timeline-date">Sept 2023 – May 2025</span>
             <h3 class="timeline-title">DevOps Engineer</h3>
             <p class="timeline-org">Assetmantle Pvt. Ltd. — Blockchain Infrastructure</p>
-            <p class="timeline-desc">Reduced AWS/Hetzner infrastructure costs by 38% through architecture optimization and automated CI/CD (Docker, Kubernetes) with rollout/rollback policies, maintaining 99%+ uptime across distributed nodes.</p>
+            <p class="timeline-desc">Reduced AWS/Hetzner infrastructure costs by 38% through architecture optimization and automated CI/CD (Docker, Kubernetes) with rollout/rollback policies, maintaining 99%+ uptime across distributed nodes. Cut MTTR by 40% through automated deployment guardrails.</p>
           </div>
         </div>
 
@@ -227,7 +477,7 @@
             <span class="timeline-date">Jan 2023 – Jul 2023</span>
             <h3 class="timeline-title">Software Development Intern</h3>
             <p class="timeline-org">Hewlett Packard Enterprise GlobalSoft</p>
-            <p class="timeline-desc">Deployed Dockerized microservices with observability pipelines (Grafana, Prometheus), cutting MTTD and release friction across multiple service teams.</p>
+            <p class="timeline-desc">Deployed Dockerized microservices with observability pipelines (Grafana, Prometheus), cutting MTTD and release friction across multiple service teams. Reduced incident detection time by 25%.</p>
           </div>
         </div>
 
@@ -255,10 +505,14 @@
           <h4 class="skill-group-title">ML / AI</h4>
           <div class="skill-tags">
             <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span>
-            <span>Computer Vision</span><span>LLMs</span><span>Reinforcement Learning</span>
-            <span>Transformer Models</span><span>Finetuning</span><span>Prompt Engineering</span>
+            <span>Computer Vision</span><span>LLMs</span><span>Agentic AI</span>
+            <span>Reinforcement Learning</span><span>Transformer Models</span>
+            <span>Finetuning</span><span>Prompt Engineering</span>
             <span>Time-Series Forecasting</span><span>Explainable AI (XAI)</span>
+            <span>Algorithmic Fairness</span><span>RAG</span>
             <span>Model Evaluation</span><span>A/B Testing</span>
+            <span>Feature Engineering</span><span>Gradient Boosting</span>
+            <span>Credit Risk Modeling</span>
           </div>
         </div>
 
@@ -266,8 +520,11 @@
           <h4 class="skill-group-title">Frameworks &amp; Tools</h4>
           <div class="skill-tags">
             <span>Python</span><span>PyTorch</span><span>TensorFlow</span>
-            <span>Scikit-learn</span><span>HuggingFace</span><span>FastAPI</span>
-            <span>Flask</span><span>MLflow</span><span>Streamlit</span><span>SQL</span><span>Bash</span>
+            <span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span>
+            <span>HuggingFace</span><span>FastAPI</span><span>Flask</span>
+            <span>MLflow</span><span>Streamlit</span><span>NumPy</span>
+            <span>Pandas</span><span>Jupyter Notebooks</span>
+            <span>SQL</span><span>Bash</span>
           </div>
         </div>
 
@@ -277,6 +534,7 @@
             <span>AWS</span><span>GCP (Cloud Run)</span><span>Docker</span>
             <span>Kubernetes</span><span>CI/CD</span><span>Git</span>
             <span>Linux</span><span>Prometheus</span><span>Grafana</span>
+            <span>Railway</span><span>Monitoring</span>
           </div>
         </div>
 
